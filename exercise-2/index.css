@@ -1,0 +1,12 @@
+div p {
+    background-color: black;
+    color:white;
+}
+
+div p:nth-child(1) {
+    background-color: green;
+    color:white;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+
+}
