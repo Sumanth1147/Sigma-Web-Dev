@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      header{
+        position: sticky;
+        top: 0;
+      }
+      nav {
+        background-color: pink;
+        height: 83px; /*if we don't give this to elements, they will not be visible */
+      }
+
+      .container {
+        background-color: rgb(18, 162, 49);
+        margin: 10px 5px;
+        text-align: center;
+        padding: 23px 23px;
+      }
+
+      .box1 {
+        height: 70vh;
+        background-color: brown;
+        display: inline-block;
+        width: 45%; /*if we don't give width to elements, they will not be visible */
+        margin: 0 23px;
+      }
+
+      .box2 {
+        height: 70vh;
+        background-color: rgb(42, 56, 165);
+        display: inline-block;
+        width: 45%; /*if we don't give width to elements, they will not be visible */
+        margin: 0 23px;
+      }
+
+      main {
+        background-color: black;
+        color: white;
+        padding: 34px;
+      }
+      .text-box {
+        border: 2px solid blue;
+        margin: 50px 450px;
+        text-align: center;
+        padding: 23px 23px;
+        border-radius: 20px;
+        font-size: 2em;
+        box-sizing: border-box;
+      }
+
+      .orange-box{
+        height: 50px;
+        width: 50px;
+        background-color: #e3bb1d;
+        border: 2px solid white;
+        border-radius: 50px;
+        position: fixed;
+        bottom: 12px;
+        right: 23px;
+      }
+
+      footer {
+        background-color: beige;
+        height: 103px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+      </div>
+      <div class="text-box">
+        <p>This is sigma web dev course</p>
+      </div>
+
+      <div class="orange-box">
+
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
