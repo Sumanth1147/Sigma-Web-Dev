@@ -1,0 +1,173 @@
+.logo img{
+    width: 164px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Segoe UI";
+}
+
+.right ul {
+    display: flex;
+    gap: 34px;
+}
+
+.right ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.right ul li span{
+    padding: 0 5px;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+.container{
+    width: 80vw;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 50px;
+}
+
+.items{
+    justify-content: center;
+    background-color: #f9f9f9;
+    display: grid;
+    justify-content: center;
+    height: 162px;
+}
+
+.items p {
+    font-weight: lighter;
+    margin-top: -23px;
+    text-align: center;
+    height: 0px;
+}
+
+.title{
+    text-align: center;
+    padding: 24px 0;
+    font-weight: 700;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.title span{
+    text-align: center;
+}
+
+.buttons{
+    padding: 20px 10px 0 10px;
+}
+
+.buttons span{
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white;
+    padding: 9px 10px;
+    list-style: none;
+}
+
+.buttons span a{
+    color: white;
+    text-decoration: none;
+}
+
+.buttons span:nth-child(1){
+    background-color: rgb(22, 180, 233);
+}
+
+.buttons span:nth-child(2){
+    background-color: #5cb85c;
+}
+
+.second{
+    margin: 70px 0;
+    height: 800px;
+    background-color: #222222;
+}
+
+.newsletter-container{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 172px;
+    
+}
+
+.newsletter-container .letter-items{
+    text-align: center;
+    padding: 80px 0;
+    color: white;
+    
+}
+.newsletter-container .letter-item-1{
+    text-align: center;
+    width: 30vw;
+    color: white;
+    padding-top: 145px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.letter-item-1 span{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.newsletter-container .email-box{
+    flex-wrap: wrap;
+    height: 209px;
+    width: 235px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.newsletter-container .letter-item-2{
+    padding-right: 300px;
+}
+
+.email-box span{
+    color: #2bb2b2;
+    font-size: 1.2em;
+    padding: 29px 5px 2px 5px;
+    font-family: sans-serif;
+}
+
+.email-box p{
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.email-box button{
+    font-weight: 700;
+    margin-top: 5px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #2bb2b2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.second .text1{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 265px;
+}
+
+.second .text1 span{
+    font-size: 1.5em;
+}
