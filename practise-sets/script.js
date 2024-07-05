@@ -49,10 +49,79 @@
 
 // Q2
 
-const elements = document.querySelectorAll('.box');
+// const elements = document.querySelectorAll('.box');
 
-elements[0].style.color = 'red'
-elements[2].style.color = 'red'
+// elements[0].style.color = 'red'
+// elements[2].style.color = 'red'
+
+// chapter 8  -- Q1  
+
+// const box1 = document.getElementById('box1');
+
+// box1.addEventListener('click', () => {
+//     alert(" I'm box 1")
+// })
+
+// const box2 = document.getElementById('box2');
+
+// box2.addEventListener('click', () => {
+//     alert(" I'm box 2")
+// })
+
+
+// let prom1 = new Promise((resolve, reject) => {
+//     let a = Math.random()
+//     if (a < 0.5) {
+//         resolve("I'm resolved")
+//     } else {
+//             reject('rejected')
+//     }
+// })
+
+// prom1.then((a) => {
+//     console.log(a);   
+// }).catch((e) => {
+//     console.log(e);
+    
+// })
+// console.log(prom1);
+
+// settle means resolve or reject
+// resolve means promise has settled successfully
+// reject means promise has not settled successfully
+
+
+async function getData() {
+
+    let x = await fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify({
+    title: 'foo',
+    body: 'bar',
+    userId: 1,
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+
+let data = await x.json();
+return data;
+}
+
+async function main() {
+    console.log('inside main');
+    let data = await getData();
+    console.log(data);
+    
+}
+
+main()
+
+
+
+
+
 
 
 

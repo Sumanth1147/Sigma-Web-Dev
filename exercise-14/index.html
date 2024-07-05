@@ -1,0 +1,118 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise-14</title>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+             <p>Initializing Hacking...</p>
+            <p>Reading your Files....</p>
+            <p>Password files Detected...</p>
+            <p>Sending all passwords and personal files to server...</p>
+            <p>Cleaning up...</p> -->
+        <!-- </div>
+    </div>
+
+    <script>
+        async function delay() {
+            let r = Math.random();
+            let random = 1 + r*(6)
+            
+           await setInterval(() => {
+                const divtext = document.querySelector('.text')
+                let detailsP = document.createElement("p");
+                const list = ['Initializing Hacking...', 'Reading your Files...', 'Password files Detected...', 'Sending all passwords and personal files to server...', 'Cleaning up...'];
+                for (let i = 0; i < list.length; i++) {
+                    detailsP.textContent = list[i]
+                    divtext.appendChild(detailsP);
+                } 
+            }, random*1000);
+        }
+
+        delay(); -->
+
+    <!-- </script>
+</body>
+</html> --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise-14</title>
+    <style>
+        body {
+            background-color: green;
+            color: #00FF00;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.5em;
+            padding: 20px;
+        }
+        .blinking {
+            display: inline-block;
+            width: 1em;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text"></div>
+    </div>
+
+    <script>
+        function blinkDots(element) {
+            let dots = "";
+            let count = 0;
+            setInterval(() => {
+                if (count === 0) {
+                    dots = "";
+                } else if (count === 1) {
+                    dots = ".";
+                } else if (count === 2) {
+                    dots = "..";
+                } else if (count === 3) {
+                    dots = "...";
+                }
+                element.textContent = dots;
+                count = (count + 1) % 4; // Cycle through 0 to 3
+            }, 500); // Change dots every 500ms
+        }
+
+        async function delay() {
+            const divtext = document.querySelector('.text');
+            const list = [
+                'Initializing Hacking', 
+                'Reading your Files', 
+                'Password files Detected', 
+                'Sending all passwords and personal files to server', 
+                'Cleaning up'
+            ];
+            
+            for (let i = 0; i < list.length; i++) {
+                let randomDelay = 1000 + Math.random() * 6000; // 1 to 7 seconds delay
+                await new Promise(resolve => setTimeout(resolve, randomDelay));
+                
+                let detailsP = document.createElement("p");
+                detailsP.textContent = list[i];
+                divtext.appendChild(detailsP);
+
+                // Blinking effect for dots
+                let dots = document.createElement("span");
+                dots.className = "blinking";
+                detailsP.appendChild(dots);
+
+                blinkDots(dots);
+            }
+        }
+
+        delay();
+    </script>
+</body>
+</html>
+
+
