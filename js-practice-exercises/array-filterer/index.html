@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Filter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .product-list {
+            list-style: none;
+            padding: 0;
+        }
+        .product-item {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Filter</h1>
+    <input type="text" id="searchInput" placeholder="Search products...">
+    <ul id="productList" class="product-list"></ul>
+    <script>
+
+        function filterProducts(products, criterion) {
+                    const searchValue = criterion.toLowerCase();
+                    return products.filter(product => {
+                        return (product.name && product.name.toString().toLowerCase().includes(searchValue)) ||
+                            (product.category && product.category.toString().toLowerCase().includes(searchValue));
+                    });
+                }
+                
+        const products = [
+            { id: 1, name: 'Laptop', category: 'Electronics', price: 999 },
+            { id: 2, name: 'Phone', category: 'Electronics', price: 699 },
+            { id: 3, name: 'Shoes', category: 'Fashion', price: 99 },
+            { id: 4, name: 'Watch', category: 'Fashion', price: 199 },
+            { id: 5, name: 'Tablet', category: 'Electronics', price: 399 }
+        ];
+
+        const searchInput = document.getElementById('searchInput');
+        const productList = document.getElementById('productList');
+
+        searchInput.addEventListener('input', () => {
+            const criterion = searchInput.value;
+            const filteredProducts = filterProducts(products, criterion);
+            updateUI(filteredProducts);
+        });
+
+        function updateUI(filteredProducts) {
+            productList.innerHTML = '';
+            filteredProducts.forEach(product => {
+                const li = document.createElement('li');
+                li.className = 'product-item';
+                li.textContent = `${product.name} - ${product.category} - $${product.price}`;
+                productList.appendChild(li);
+            });
+        }
+
+        // Initial load
+        updateUI(products);
+    </script>
+</body>
+</html>

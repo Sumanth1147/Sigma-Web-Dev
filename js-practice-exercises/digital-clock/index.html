@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>digital clock</title>
+    <style>
+        body {
+            background-color: #110d0d;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            max-width: 50vw;
+            margin: auto;
+            background-color: #551717;
+            border-radius: 10px;
+            color: white;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            max-width: 50vw;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .item {
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digital clock</h1>
+    <div class="container">
+        <div class="item date"></div>
+        <div class="item time"></div>
+        <div class="item liveseconds"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

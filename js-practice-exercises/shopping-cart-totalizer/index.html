@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Totalizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .product-list, .total {
+            margin-bottom: 20px;
+        }
+        .product-item {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+    <div class="product-list" id="productList"></div>
+    <div class="total">Total: $<span id="totalCost">0</span></div>
+
+    <script>
+        const products = [
+            { id: 1, name: 'Laptop', price: 999, quantity: 1 },
+            { id: 2, name: 'Phone', price: 699, quantity: 2 },
+            { id: 3, name: 'Shoes', price: 99, quantity: 3 },
+            { id: 4, name: 'Watch', price: 199, quantity: 1 },
+            { id: 5, name: 'Tablet', price: 399, quantity: 1 }
+        ];
+
+        function calculateTotal(products) {
+            return products.reduce((total, product) => {
+                return total + product.price * product.quantity;
+            }, 0);
+        }
+
+
+        function calculateTotal(products) {
+            return products.reduce((total, product) => {
+                return total + product.price * product.quantity;
+            }, 0);
+        }
+
+        function updateUI(products) {
+            const productList = document.getElementById('productList');
+            const totalCost = document.getElementById('totalCost');
+            productList.innerHTML = '';
+            products.forEach(product => {
+                const div = document.createElement('div');
+                div.className = 'product-item';
+                div.textContent = `${product.name} - $${product.price} x ${product.quantity}`;
+                productList.appendChild(div);
+            });
+            totalCost.textContent = calculateTotal(products).toFixed(2);
+        }
+
+        // Initial load
+        updateUI(products);
+    </script>
+</body>
+</html>
