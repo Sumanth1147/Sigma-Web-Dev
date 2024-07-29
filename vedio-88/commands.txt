@@ -1,0 +1,2 @@
+-----npm i -g nodemon    ---- will install nodemon globally, which will restart server automatically
+npm i express

@@ -1,0 +1,5 @@
+npm init -y
+npm i express jsonwebtoken
+npm i -g nodemon
+nodemon main.js  --- example
+add "type": "module", in package.json to use ES6 modules syntax
