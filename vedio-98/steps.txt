@@ -1,0 +1,6 @@
+tailwind css intelisence extension
+play.tailwindcss.com
+npm init -y 
+npm install -D tailwindcss
+npx tailwindcss init
+martl arts, streching as I may leave amd
